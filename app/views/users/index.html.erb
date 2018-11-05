@@ -1,0 +1,17 @@
+<% if logged_in? %>
+
+    <% User.all.each_with_index do |user, index| %>
+        <p>
+          <div class="card" style="width: 18rem;">
+          <h5 class="card-title"><%=user.first_name%> <%=user.last_name%></h5>
+          <h6 class="card-subtitle mb-2 text-muted"><%=user.email%></h6>
+          <%= link_to "profile page", user_url(user)%>
+        </div>
+        </p>
+      <% end %>
+
+<% else %>
+  You need to be logged in to access the club's members' list. <br><br>
+  <%= link_to "Sign up", signup_path, class: "btn btn-lg btn-primary" %>     <%= link_to "Log in", login_path, class: "btn btn-lg btn-primary" %>
+
+<% end %>

@@ -6,8 +6,9 @@
   </h2>
 
   <% if logged_in? %>
-    <%= link_to "Members index", signup_path, class: "btn btn-lg btn-primary" %>
+    <%= link_to "Members index", users_path, class: "btn btn-lg btn-primary" %>
   <% else %>
+  You need to be logged in to access the club's members' list. <br><br>
     <%= link_to "Sign up", signup_path, class: "btn btn-lg btn-primary" %>     <%= link_to "Log in", login_path, class: "btn btn-lg btn-primary" %>
   <% end %>
 </div>
