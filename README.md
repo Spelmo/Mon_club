@@ -1,24 +1,7 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This app allows user to sign up, log in and displays different informations depending on wether the user is logged in, and depending on which user is logged in.
 
-Things you may want to cover:
+* Ruby 2.5.1
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Heroku link : https://mon-club-mc.herokuapp.com/
