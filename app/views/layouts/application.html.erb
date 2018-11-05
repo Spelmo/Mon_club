@@ -13,10 +13,17 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   </head>
   <body>
-    <%= render 'layouts/header' %>
-    </header>
-    <div class="container">
+    <header><%= render 'layouts/header' %></header>
+     <div class="container">
+         <% flash.each do |message_type, message| %>
+         <div class="alert alert-<%= message_type %>"><%= message %></div>
+      <% end %>
       <%= yield %>
     </div>
   </body>
+
+  <footer>
+     <%= debug(params) if Rails.env.development? %>
+  </footer>
+
 </html>
